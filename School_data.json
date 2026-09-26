@@ -1,0 +1,61 @@
+{
+    "students": [
+        {
+            "name": "Faiz",
+            "age": 34,
+            "email": "fz45@gmail.com",
+            "roll_no": "1",
+            "grade": {
+                "Hindi": 45.0
+            }
+        },
+        {
+            "name": "Kajal",
+            "age": 32,
+            "email": "princess123@gmail.com",
+            "roll_no": "2",
+            "grade": {
+                "English": 78.0
+            }
+        },
+        {
+            "name": "Fazil",
+            "age": 35,
+            "email": "fazil09@gmail.com",
+            "roll_no": "3",
+            "grade": {
+                "Science": 90.0
+            }
+        }
+    ],
+    "teachers": [
+        {
+            "name": "Ramesh sir",
+            "age": 45,
+            "email": "ramesh09@gmail.com",
+            "Subject": "Maths",
+            "emp_id": 101
+        },
+        {
+            "name": "Roshan Mam",
+            "age": 34,
+            "email": "roshan67@gmail.com",
+            "Subject": "English",
+            "emp_id": 102
+        },
+        {
+            "name": "Koyal",
+            "age": 32,
+            "email": "koyal678@gmail.com",
+            "Subject": "Hindi",
+            "emp_id": 103
+        },
+        {
+            "name": "Johan",
+            "age": 56,
+            "email": "hjags@gmail.com",
+            "Subject": "Biology",
+            "emp_id": 104
+        }
+    ]
+}
