@@ -26,6 +26,31 @@
             "grade": {
                 "Science": 90.0
             }
+        },
+        {
+            "name": "jasim",
+            "age": 21,
+            "email": "jasimnnb@xyx.com",
+            "roll_no": "34",
+            "grade": {}
+        },
+        {
+            "name": "Kochu",
+            "age": 18,
+            "email": "kochu@smapl.com",
+            "roll_no": "43",
+            "grade": {
+                "Maths": 67.0
+            }
+        },
+        {
+            "name": "Monti",
+            "age": 23,
+            "email": "monti@comon.com",
+            "roll_no": "99",
+            "grade": {
+                "AI": 68.0
+            }
         }
     ],
     "teachers": [
@@ -56,6 +81,20 @@
             "email": "hjags@gmail.com",
             "Subject": "Biology",
             "emp_id": 104
+        },
+        {
+            "name": "Tejendra Verma",
+            "age": 43,
+            "email": "tej90@khuchbhi.com",
+            "Subject": "AI and ML",
+            "emp_id": 201
+        },
+        {
+            "name": "Mhendra Agrawal",
+            "age": 34,
+            "email": "agrawal@teach.com",
+            "Subject": "Sociology",
+            "emp_id": 202
         }
     ]
 }

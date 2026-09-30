@@ -5,7 +5,7 @@ from pathlib import Path
 
 database="School_data.json"
 data={"students":[],"teachers":[]}
-if Path.exists(database):
+if Path(database).exists():
     with open(database,'r') as f:
         content=f.read()
     if content:
@@ -29,7 +29,7 @@ class Persons(ABC):
         if '@' in email and '.' in email:
             return True
         else:
-            False
+            return False
     
 
 class Student(Persons):
@@ -48,14 +48,18 @@ class Student(Persons):
                 print(f"Garde:{i['grade']}")
                 print(f"Average:{avg}")
                 return
-             else:
-                  print("Student not found") 
-                  return
+             
+        print("Student not found") 
+                  
             
     def register(self):
 
-        name=input("Enter your name:-")             
-        age=int(input("Enter your age:-"))   
+        name=input("Enter your name:-") 
+        try:            
+            age=int(input("Enter your age:-"))
+        except ValueError:
+             print("AGe must be a number..")
+             return       
         roll_no=input("Enter your roll number:-")
         for i in data['students']:
                            if  i['roll_no'] ==roll_no:
@@ -97,7 +101,8 @@ class Student(Persons):
                                      save()
                                      
                                      return 
-        print("Student not found")
+        else:
+             print("Student not found")               
             
 
 
@@ -117,13 +122,17 @@ class Teacher(Persons):
                 print(f"Email:{i['email']}")
                 print(f"Subject:{i['Subject']}")
                 return 
-             else:
-                  print("Invalid emp_id")
-                  return 
+           
+        print("Invalid emp_id")
+                   
     def register(self):
 
-        name=input("Enter your name:-")             
-        age=int(input("Enter your age:-"))             
+        name=input("Enter your name:-") 
+        try:
+            age=int(input("Enter your age:-"))
+        except ValueError:
+             print("Age must be a number..")
+             return                 
         email=input("Enter your email:-") 
         subject=input("Enter your Subject:-")            
         emp_id=int(input("Enter your emp_id number:-"))
@@ -153,33 +162,38 @@ class Teacher(Persons):
                          
 
 while True:
-     
-    print("Press 1 to Register Student:-")
-    print("Press 2 to Register Teacher:-")
-    print("Press 3 to add grades:-")
-    print("Press 4 to Show Student's detail:-")
-    print("Press 5 to Show Teacher's detail:-")
-    print("Press 6 to Exit.. :-")
+    
+         
+        print("Press 1 to Register Student:-")
+        print("Press 2 to Register Teacher:-")
+        print("Press 3 to add grades:-")
+        print("Press 4 to Show Student's detail:-")
+        print("Press 5 to Show Teacher's detail:-")
+       
 
 
+    
         
-    choise=int(input("Enter your choise:-"))
-    std=Student()
-    tech=Teacher()
-    if choise==1:
-        std.register()
-        
-    elif choise==2:
-        tech.register()
-    elif choise==3:
-        std.add_grade()
-    elif choise==4:
-        std.show()
-    elif choise==5:
-        tech.show()
-    elif choise==6:
-         break  
-    else:
-         print("Invalid choice")
-         break   
+        choise=int(input("Enter your choise:-"))
+        std=Student()
+        tech=Teacher()
+        if choise==1:
+            std.register()
             
+        elif choise==2:
+            tech.register()
+        elif choise==3:
+            std.add_grade()
+        elif choise==4:
+            std.show()
+        elif choise==5:
+            tech.show()
+        elif choise==6:
+             break    
+        else:
+            print("Invalid choice")
+            continue  
+            
+
+
+          
