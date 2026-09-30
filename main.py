@@ -178,5 +178,8 @@ while True:
     elif choise==5:
         tech.show()
     elif choise==6:
-         break    
+         break  
+    else:
+         print("Invalid choice")
+         break   
             
