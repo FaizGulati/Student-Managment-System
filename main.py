@@ -152,27 +152,31 @@ class Teacher(Persons):
         print(f"{name} Sir/Madam Registerd Succesfully")
                          
 
-
-print("Press 1 to Register Student:-")
-print("Press 2 to Register Teacher:-")
-print("Press 3 to add grades:-")
-print("Press 4 to Show Student's detail:-")
-print("Press 5 to Show Teacher's detail:-")
-
-
+while True:
      
-choise=int(input("Enter your choise:-"))
-std=Student()
-tech=Teacher()
-if choise==1:
-    std.register()
-    
-elif choise==2:
-    tech.register()
-elif choise==3:
-    std.add_grade()
-elif choise==4:
-    std.show()
-elif choise==5:
-    tech.show()
+    print("Press 1 to Register Student:-")
+    print("Press 2 to Register Teacher:-")
+    print("Press 3 to add grades:-")
+    print("Press 4 to Show Student's detail:-")
+    print("Press 5 to Show Teacher's detail:-")
+    print("Press 6 to Exit.. :-")
+
+
+        
+    choise=int(input("Enter your choise:-"))
+    std=Student()
+    tech=Teacher()
+    if choise==1:
+        std.register()
+        
+    elif choise==2:
+        tech.register()
+    elif choise==3:
+        std.add_grade()
+    elif choise==4:
+        std.show()
+    elif choise==5:
+        tech.show()
+    elif choise==6:
+         break    
             
